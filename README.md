@@ -68,7 +68,7 @@ embeddings.npy (feature vectors)
 6️⃣ Search quality improves over time
 
 📊 System Flow
-User Upload  →  Flask API
+User Upload  →  Flask based REST API
                  ↓
          Preprocessing (resize/normalize)
                  ↓
