@@ -141,9 +141,8 @@ Open:
 
 🖥️ Screenshots (Optional Section)
 
-🖼️ Upload Screen
-🔍 Results View
-📊 JSON Response
+<img width="1892" height="671" alt="Screenshot 2025-12-28 095639" src="https://github.com/user-attachments/assets/5a7be8ce-9b74-441e-b814-3fde021a32c8" />
+
 
 
 ▶️ Usage
