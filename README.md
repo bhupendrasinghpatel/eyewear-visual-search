@@ -67,7 +67,7 @@ embeddings.npy (feature vectors)
 5️⃣ User feedback logged
 6️⃣ Search quality improves over time
 
-📊 System Flow 
+📊 System Flow
 User Upload  →  Flask API
                  ↓
          Preprocessing (resize/normalize)
@@ -84,9 +84,7 @@ User Upload  →  Flask API
                  ↓
      Frontend Displays Recommendations
 
-
 🔍 Output Example
-
 {
   "category": "Eyeglasses",
   "predicted_style": "Rectangle",
@@ -95,15 +93,58 @@ User Upload  →  Flask API
   "product_id": 637
 }
 
+🧠 AI Strategy
+
+The project uses a pretrained ResNet-50 CNN as a feature extractor:
+
+✔ Remove final classification head
+✔ Extract 2048-dim embedding
+✔ Store vectors in FAISS index
+
+Similarity is computed using:
+
+Similarity % = 100 − boosted_score
+
+
+Where:
+
+boosted_score = distance − (clicks × weight)
+
+
+So relevant items move higher with user feedback 👍
+
 ⚙️ Installation & Setup
-:- Install Dependencies
+1️⃣ Clone Repository
+git clone https://github.com/YOUR_USERNAME/eyewear-visual-search.git
+cd eyewear-visual-search
+
+2️⃣ Install Dependencies
 pip install -r requirements.txt
-:- Run Backend
+
+
+
+3️⃣ Run Backend
 python app.py
-:- Run Frontend
+
+
+API runs at:
+
+👉 http://127.0.0.1:5000
+
+4️⃣ Run Frontend
 python -m http.server 8000
 
-Open :-- http://127.0.0.1:8000/frontend.html
+
+Open:
+
+👉 http://127.0.0.1:8000/frontend.html
+
+🖥️ Screenshots (Optional Section)
+
+🖼️ Upload Screen
+🔍 Results View
+📊 JSON Response
+
 
 ▶️ Usage
 
@@ -111,6 +152,15 @@ Open :-- http://127.0.0.1:8000/frontend.html
 2️⃣ Select category (optional)
 3️⃣ Click Find Similar Eyewear
 4️⃣ View AI-generated recommendations
+5️⃣ Click 👍 to mark relevant matches
+
+📦 Example Use-Cases
+
+👓 Replace broken glasses
+🎥 Find celebrity eyewear
+🛍️ Discover similar shopping styles
+🤝 Fashion discovery tools
+
 
 🙌 Acknowledgements
 
