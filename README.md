@@ -115,7 +115,7 @@ So relevant items move higher with user feedback 👍
 
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
-git clone https://github.com/YOUR_USERNAME/eyewear-visual-search.git
+git clone https://github.com/bhupendra singh/eyewear-visual-search.git
 cd eyewear-visual-search
 
 2️⃣ Install Dependencies
